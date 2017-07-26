@@ -1,0 +1,23 @@
+{
+  "name": "node-myapp",
+  "version": "1.0.0",
+  "description": "myapp",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "koa",
+    "async",
+    "node"
+  ],
+  "author": "Zhumei Song",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhumeisongsong/node.git"
+  },
+  "dependencies": {
+    "koa": "2.3.0"
+  }
+}
