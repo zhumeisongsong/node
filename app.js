@@ -1,18 +1,26 @@
-const Koa = require('koa');
+const Koa = require('koa')
 
-const bodyParser = require('koa-bodyparser');
+var cors = require('koa-cors')
 
-const controller = require('./controller');
+var route = require('koa-route')
 
-const app = new Koa();
+const bodyParser = require('koa-bodyparser')
 
-app.use(async (ctx,next)=>{
-   console.log(`Progress ${ctx.request.method} ${ctx.request.url}...`);
-    await next();
-});
-app.use(bodyParser());
+const controller = require('./controller')
 
-app.use(controller());
+const app = new Koa()
 
-app.listen(4000);
-console.log('app started at port 4000..');
+app.use(async (ctx, next) => {
+  console.log(`Progress ${ctx.request.method} ${ctx.request.url}...`)
+  await next()
+})
+
+app.use(cors())
+
+app.use(bodyParser())
+
+app.use(controller())
+
+app.listen(4000)
+
+console.log('app started at port 4000..')

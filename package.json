@@ -1,7 +1,7 @@
 {
-  "name": "node-myapp",
+  "name": "node",
   "version": "1.0.0",
-  "description": "myapp",
+  "description": "node",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
@@ -20,6 +20,12 @@
   "dependencies": {
     "koa": "2.3.0",
     "koa-bodyparser": "4.2.0",
-    "koa-router": "7.2.1"
+    "koa-cors": "0.0.16",
+    "koa-route": "^3.2.0",
+    "koa-router": "7.2.1",
+    "nodemailer": "^4.4.0"
+  },
+  "devDependencies": {
+    "node-json2html": "^1.1.1"
   }
 }
